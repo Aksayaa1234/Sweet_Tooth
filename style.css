@@ -1,0 +1,184 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    background-color: rgb(169, 237, 214);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.full{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    width: 350px;
+    height: 230px;
+    border-radius: 20px;
+    background-color: rgb(235, 238, 240);
+    padding: 3%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container p{
+    margin-bottom: 1rem;
+    font-size: 1.2em;
+}
+.over{
+    display: none;
+    font-weight: 700;
+}
+.start{
+    width: 4rem;
+    height: 2rem;
+    background-color: #f19999;
+    border-radius: 1rem;
+}
+.input{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.input div{
+    display:flex ;
+    width: 50%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.speed{
+    width: 3rem;
+    height: 2rem;
+    padding-left: 7px;
+}
+.ballon{
+    display: inline-block;
+    width: 100px;
+    height: 120px;
+    background-color: rgb(220, 140, 153);
+    border-radius: 50%;
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.08);
+    position: relative;
+    /* margin:50px 30px; */
+    margin-left: 30px;
+    margin-right: 30px;
+    transition:transform 0.5s ease;
+    z-index:1;
+    top: 600px;
+    animation:fly 4s ease-in-out infinite, balloons 4s ease-in-out infinite;
+    /* animation:fly 4s ease-in-out infinite; */
+    transform-origin:bottom center;
+}
+.ballon::before{
+    content: "▲";
+    color: rgb(220, 140, 153);
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    bottom: -10px;
+    z-index: 3;
+}
+.ballon::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    text-align: center;
+    top: 120px;
+    left:50px;
+    margin: 0 auto;
+    z-index: 1;
+}
+@keyframes balloons
+{
+    to{top: -280px;}
+}
+@keyframes fly {
+    0%,100%{ transform:translateY(0) rotate(-2deg); }
+    25%{ transform:translateY(-25px) rotate(4deg); }
+    50%{ transform:translateY(-25px) rotate(-6deg); }
+    75%{ transform:translateY(-25px) rotate(0deg); }
+  }
+  .b-container{
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap: 120px;
+  }
+
+  .ballon:nth-child(2){ background:hsl(245,40%,65%); animation-duration:3.5s; top:620px}
+  .ballon:nth-child(2):before { color:hsl(245,40%,65%);}
+
+  .ballon:nth-child(3){ background:hsl(59,50%,58%); animation-duration:4.5s; top:570px}
+  .ballon:nth-child(3):before { color:hsl(59,50%,58%);}
+
+  .ballon:nth-child(4){ background:hsl(139,50%,60%); animation-duration:3s; top:650px }
+  .ballon:nth-child(4):before { color:hsl(139,50%,60%);}
+
+  .ballon:nth-child(5){ background:hsl(32, 74%, 59%); animation-duration:3s; top:585px }
+  .ballon:nth-child(5):before { color:hsl(32, 74%, 59%);}
+
+  /* .b-container{
+    display: none;
+  }
+  .full{
+    display: none;
+  } */
+
+  .game-area{
+    display: none;
+    position: relative;
+    width: 600px;
+    height: 550px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  .road{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .basket{
+    position: absolute;
+    display: flex;
+    left: 220px;
+    bottom: -10px;
+    height: 120px;
+  }
+
+  .object{
+    position: absolute;
+    display:flex;
+    width: 100px;
+    height: 90px;
+    top: 50px;
+  }
+
+  .mark{
+    display: none;
+    margin-top: 8px;
+    background-color: #f19999;
+    padding: 9px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+  }
+ 
