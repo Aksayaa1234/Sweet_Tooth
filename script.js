@@ -21,7 +21,6 @@ const start=()=>{
     ballooncontainer.style.display="none";
     mark2.style.display="block";
     gamearea.style.display="block";
-    //console.log(typeof(inputspeed.value))
     speed=parseInt(inputspeed.value);
     document.addEventListener('keydown',(event)=>{
         if(event.key==='ArrowLeft' && bposition>0)
