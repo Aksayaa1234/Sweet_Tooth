@@ -47,7 +47,6 @@ const gamestart=()=>{
 const resetObject=(object,type)=>{
     object.style.top='-90px';
     object.style.left=`${Math.floor(Math.random()*500)}px`;
-    
 }
 
 const moveObject=(object,type)=>{
