@@ -33,6 +33,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .container p{
     margin-bottom: 1rem;
@@ -41,6 +42,13 @@ body{
 .over{
     display: none;
     font-weight: 700;
+}
+.red{
+  color: red;
+  margin-right: 8px;
+}
+.score{
+  margin-left: 3px;
 }
 .start{
     width: 4rem;
@@ -51,15 +59,17 @@ body{
 .input{
     width: 90%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
 }
 .input div{
     display:flex ;
-    width: 50%;
-    justify-content: space-around;
+    width: 40%;
+    gap: 10px;
+    /* justify-content: space-around; */
     flex-wrap: wrap;
     align-content: center;
+    align-items: center;
 }
 .speed{
     width: 3rem;
@@ -88,7 +98,7 @@ body{
     content: "▲";
     color: rgb(220, 140, 153);
     position: absolute;
-    display: block;
+    display: inline-block;
     width: 100%;
     text-align: center;
     bottom: -10px;
@@ -132,7 +142,7 @@ body{
   .ballon:nth-child(4){ background:hsl(139,50%,60%); animation-duration:3s; top:650px }
   .ballon:nth-child(4):before { color:hsl(139,50%,60%);}
 
-  .ballon:nth-child(5){ background:hsl(32, 74%, 59%); animation-duration:3s; top:585px }
+  .ballon:nth-child(5){ background:hsl(32, 74%, 59%); animation-duration:3.8s; top:585px }
   .ballon:nth-child(5):before { color:hsl(32, 74%, 59%);}
 
   /* .b-container{
@@ -163,7 +173,7 @@ body{
     display: flex;
     left: 220px;
     bottom: -10px;
-    height: 120px;
+    height: 100px;
   }
 
   .object{
