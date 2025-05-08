@@ -36,7 +36,8 @@ const gamestart=()=>{
     resetObject(cake,'cake');
     resetObject(chilli,'chilli');
     resetObject(candy,'candy');
-    interval=setInterval(()=>{       
+    interval=setInterval(()=>{  
+        basket.style.scale=1;     
         moveObject(cake,'cake');
         moveObject(chilli,'chilli');
         moveObject(candy,'candy');
@@ -66,6 +67,7 @@ const checkCollision=()=>{
     // console.log(ca);
     if(b.left<ca.right && b.right>ca.left && b.top<ca.bottom && b.bottom>ca.top)
     {
+        basket.style.scale=1.2;
         s++;
         mark.textContent=s;
         resetObject(cake,'cake');
@@ -73,6 +75,7 @@ const checkCollision=()=>{
 
     if(b.left<can.right && b.right>can.left && b.top<can.bottom && b.bottom>can.top)
     {
+        basket.style.scale=1.2;
         s++;
         mark.textContent=s;
         resetObject(candy,'candy');
@@ -80,6 +83,7 @@ const checkCollision=()=>{
 
     if(b.left<ch.right && b.right>ch.left && b.top<ch.bottom && b.bottom>ch.top)
     {
+        basket.style.scale=1.2;   
         clearInterval(interval);
         full.style.display="flex";
         ballooncontainer.style.display="flex";
